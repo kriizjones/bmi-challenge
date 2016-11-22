@@ -9,6 +9,7 @@ BMICalculator.prototype.metric_bmi = function(obj) {
     obj.bmiValue = parseFloat(finalBmi.toFixed(2));
     setBMIMessage(obj);
   }
+}
 
   function setBMIMessage (obj){
     if (obj.bmiValue < 18.5) {
@@ -23,7 +24,7 @@ BMICalculator.prototype.metric_bmi = function(obj) {
   obj.bmiMessage = "Overweight"
   }
 
-  uf (obj.bmiValue > 30) {
+  if (obj.bmiValue > 30) {
     obj.bmiMessage = "Obese"
   }
-};
+}
