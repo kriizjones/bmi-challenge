@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.2/foundation.min.css">
     <script src="src/Person.js"></script>
     <script src="src/bmi_calculator.js"></script>
     <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
@@ -16,12 +17,38 @@
     <form>
       <input type="text" id="weight" placeholder="Weight">
       <input type="text" id="height" placeholder="Height">
-      <input type="button" id="calculate" value="Calculate">
-    </form>
-    <div>
-      <span id="display_value"></span>
-      <span id="display_message"></span>
+
+      <script>
+var count=1;
+function setColor(btn, color){
+    var property = document.getElementById(btn);
+    if (count == 0){
+        property.style.backgroundColor = "#FFFFFF"
+        count=1;
+    }
+    else{
+        property.style.backgroundColor = "#7FFF00"
+        count=0;
+    }
+}
+</script>
+</head>
+
+<body>
+
+<input type="button" id="calculate" value = "Calculate"
+style= "color:purple" onclick="setColor('calculate', '#101010')";/>
+
+</body>
+</html>
+
+  </form>
+  <div>
+  <span id="display_value"></span>
+  <span id="display_message"></span>
+
+  
 
     </div>
   </body>
-  </html>
+</html>
